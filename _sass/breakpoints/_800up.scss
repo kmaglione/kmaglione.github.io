@@ -2,6 +2,8 @@
 GLOBAL STYLES
 ***************/
 
+@use "sass:color";
+
 body {
 	font-size: 125%;
 }
@@ -11,7 +13,7 @@ body {
 	position: relative;
 	z-index: 1;
 
-	&:after {
+	&::before {
 		z-index: -1;
 		background: white;
 		content: "";
@@ -99,7 +101,7 @@ HEADER STYLING
 					padding: 0 .25em;
 
 					&:hover {
-						color: darken(white, 20%);
+						color: color.adjust(white, $lightness: -20%);
 					}
 				}
 
