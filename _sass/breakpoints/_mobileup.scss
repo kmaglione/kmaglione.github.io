@@ -522,6 +522,10 @@ DARK THEME STYLING
 		color: white;
 	}
 
+        .dark-mode-invert {
+           filter: invert(100%);
+        }
+
 	.posts article .date {
 		color: white;
 	}

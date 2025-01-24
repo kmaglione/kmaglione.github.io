@@ -152,8 +152,8 @@ long arrayManipulation(int n, vector<vector<int>> queries) {
 
 
 [tree0]: {% link /assets/img/array-manipulation/tree-0.png %}
-{: .center }
+{: .center .dark-mode-invert }
 [tree1]: {% link /assets/img/array-manipulation/tree-1.png %}
-{: .center }
+{: .center .dark-mode-invert }
 [tree2]: {% link /assets/img/array-manipulation/tree-2.png %}
-{: .center }
+{: .center .dark-mode-invert }

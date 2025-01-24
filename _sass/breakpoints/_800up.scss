@@ -28,6 +28,14 @@ body {
 	}
 }
 
+
+@media (prefers-color-scheme: dark) {
+  .content::before {
+     background: black;
+     border-top: 1px solid white;
+  }
+}
+
 .container {
 	max-width: 880px;
 	margin-left: auto;
@@ -283,6 +291,10 @@ DARK THEME STYLING
 		background-color: black;
 		color: white;
 	}
+
+        .dark-mode-invert {
+           filter: invert(100%);
+        }
 
 	.content:after,
 	.post .featuredImage:before {
