@@ -6,7 +6,7 @@ module Jekyll
 
     def render(context)
       text = super.strip
-      "<p class=\"intro\"><span class=\"dropcap\">#{text[0]}</span>#{text[1..text.length]}</p>"
+      "<p class=\"intro\" markdown=\"1\"><span class=\"dropcap\">#{text[0]}</span>#{text[1..text.length]}</p>"
     end
   end
 end
