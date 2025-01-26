@@ -135,10 +135,8 @@ long arrayManipulation(int n, vector<vector<int>> queries) {
     // Process each query, adding the given value to the appropriate
     // sub-ranges in our binary tree.
     for (auto& query : queries) {
-        int start = query[0] - 1;
-        int end = query[1] - 1;
-        int val = query[2];
-        add(tree, 0, 0, nelem - 1, start, end, val);
+        auto [start, end, val] = reinterpret_cast<int(&)[3]>(query.front());
+        add(tree, 0, 0, nelem - 1, start - 1, end - 1, val);
     }
 
     // Recurse the entire calculated tree and return the largest value
