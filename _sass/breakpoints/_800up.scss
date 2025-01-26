@@ -219,6 +219,13 @@ POST STYLING
 	}
 }
 
+@media (prefers-color-scheme: dark) {
+  .post .featuredImage::before {
+     background: black;
+     border-top: 1px solid white;
+  }
+}
+
 
 /***************
 POST NAV STYLING
