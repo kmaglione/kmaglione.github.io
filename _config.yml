@@ -31,13 +31,14 @@ navigation:
 social:
     github: kmaglione
     twitter: NoMiddleGears
+    bluesky: kmaglione.bsky.social
     email: maglione.k@gmail.com
     linkedin: kmaglione
     # facebook: kmaglione
     # youtube: kmaglione
     # tumblr: kmaglione
 
-# google_analytics: "UA-58263416-1"
+google_analytics: "G-9J571M5WPJ"
 
 disqus:
     shortname: loosescrews
