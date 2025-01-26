@@ -42,37 +42,10 @@ order to process unvisited nodes. We need a priority queue which allows us to
 efficiently adjust the priority of nodes already in the queue as we walk the
 graph. The `heap` and `priority_queue` utilities in C++'s STL don't allow for
 that. Boost's `Heap` class in principle does, but in the interests of avoiding
-external dependencies, we simply implement our own.
-
-The final code looks like this:
+external dependencies, we simply implement our own:
 
 {% codeblock lang:c++ %}
 using namespace std;
-
-struct City {
-    static constexpr ulong Infinity = ULONG_MAX;
-
-    bool visited = false;
-    // The current index of the city in the PriorityQueue's heap.
-    int index = 0;
-    // The list of neighbor cities reachable by road from this one.
-    vector<City*> neighbors;
-    // The total cost to reach this city from another city with a library,
-    // or to build a library in it if it wasn't already reachable from a
-    // city with a library.
-    ulong cost = Infinity;
-
-    bool operator<(City& other) {
-        return cost < other.cost;
-    }
-    bool operator<=(City& other) {
-        return cost <= other.cost;
-    }
-
-    static bool less(City* a, City* b) {
-        return *a < *b;
-    }
-};
 
 template<typename T>
 class PriorityQueue {
@@ -154,7 +127,35 @@ class PriorityQueue {
         return result;
     }
 };
+{% endcodeblock %}
 
+The final code looks like this:
+
+{% codeblock lang:c++ %}
+struct City {
+    static constexpr ulong Infinity = ULONG_MAX;
+
+    bool visited = false;
+    // The current index of the city in the PriorityQueue's heap.
+    int index = 0;
+    // The list of neighbor cities reachable by road from this one.
+    vector<City*> neighbors;
+    // The total cost to reach this city from another city with a library,
+    // or to build a library in it if it wasn't already reachable from a
+    // city with a library.
+    ulong cost = Infinity;
+
+    bool operator<(City& other) {
+        return cost < other.cost;
+    }
+    bool operator<=(City& other) {
+        return cost <= other.cost;
+    }
+
+    static bool less(City* a, City* b) {
+        return *a < *b;
+    }
+};
 
 long roadsAndLibraries(int n, int c_lib, int c_road,
                        vector<vector<int>> cityPairs) {
