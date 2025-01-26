@@ -8,12 +8,13 @@
   white-space: pre; 
   overflow: auto; 
   word-wrap: normal; /* horizontal scrolling */
-  -moz-border-radius: 3px; 
-  -webkit-border-radius: 3px; 
-  border-radius: 3px;
+  -moz-border-radius: .5em; 
+  -webkit-border-radius: .5em; 
+  border-radius: .5em;
   padding: 20px; 
   background: #343642;
   color: #C1C2C3;
+  line-height: 1.4;
 }
 .highlight .hll { background-color: #ffc; }
 .highlight .gd { color: #2e3436; background-color: #0e1416; }
