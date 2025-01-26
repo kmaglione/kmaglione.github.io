@@ -99,6 +99,10 @@ td.code, td.gutter {
   }
 }
 
+p {
+  hyphens: auto;
+}
+
 blockquote {
   font-size: 1.25em; // 20px / 16px
   line-height: 1.25; // 25px / 20px
