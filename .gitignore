@@ -7,4 +7,5 @@ node_modules
 .jekyll-cache/
 .jekyll-cache/*
 _vendor
+_tmp
 _posts/.*

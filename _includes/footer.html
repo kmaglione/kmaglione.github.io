@@ -8,6 +8,9 @@
 
 		<div class="footer-links">
 			<ul class="noList">
+				{%- if site.social.github -%}
+					{%- include footer_links/github_icon.html -%}
+				{%- endif -%}
 				{%- if site.social.facebook -%}
 					{%- include footer_links/facebook_icon.html -%}
 				{%- endif -%}
@@ -19,9 +22,6 @@
 				{%- endif -%}
 				{%- if site.social.linkedin -%}
 					{%- include footer_links/linkedin_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.github -%}
-					{%- include footer_links/github_icon.html -%}
 				{%- endif -%}
 				{%- if site.social.tumblr -%}
 					{%- include footer_links/tumblr_icon.html -%}
