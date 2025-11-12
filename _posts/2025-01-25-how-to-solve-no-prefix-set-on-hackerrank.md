@@ -106,5 +106,5 @@ void noPrefix(vector<string> words) {
 [^seq]: Or, more generally, every element of a sequence, which need not be a
     character string.
 
-[trie0]: {% link /assets/img/hackerrank/trie-0.png %}
+[trie0]: {% link /assets/img/hackerrank/trie-0.svg %}
 {: .center .dark-mode-invert style="width: 20em" }

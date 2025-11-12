@@ -516,6 +516,10 @@ POST LIST STYLING
 DARK THEME STYLING
 ***************/
 
+.dark-mode-only {
+  display: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: $black;
@@ -524,6 +528,13 @@ DARK THEME STYLING
 
         .dark-mode-invert {
            filter: invert(100%);
+        }
+
+        .dark-mode-only {
+          display: block !important;
+        }
+        .light-mode-only {
+          display: none !important;
         }
 
 	.posts article .date {
