@@ -57,9 +57,9 @@ object {
 }
 
 img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /***************
@@ -190,17 +190,17 @@ HEADER STYLING
 .header {
 	background-color: $background-color;
 	background-color: #111;
-	background-image: url("../img/cover_photo.jpg");
+	background-image: linear-gradient(to right, #111, rgba(0, 0, 0, 0) 5%),
+										url("../img/cover_photo.jpg");
 	background-size: 37em;
 	background-repeat: no-repeat;
 	background-position: right 60%;
 	color: white;
-        text-shadow:
-          2px 2px 5px black;
+	text-shadow: 2px 2px 5px black;
 	padding: 0;
 	height: 3em;
 
-        // font-family: "Lobster", cursive;
+	// font-family: "Lobster", cursive;
 
 	.container {
 		padding: 0;
@@ -214,10 +214,10 @@ HEADER STYLING
 		font-size: 1em;
 		line-height: 3em;
 		font-family: $sans-serif;
-                // font-family: "Lobster", cursive;
+		// font-family: "Lobster", cursive;
 		font-weight: 500;
 		// text-transform: uppercase;
-                font-variant: small-caps;
+		font-variant: small-caps;
 
 		a {
 			color: white;
@@ -517,7 +517,7 @@ DARK THEME STYLING
 ***************/
 
 .dark-mode-only {
-  display: none !important;
+	display: none !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -526,16 +526,16 @@ DARK THEME STYLING
 		color: white;
 	}
 
-        .dark-mode-invert {
-           filter: invert(100%);
-        }
+	.dark-mode-invert {
+		filter: invert(100%);
+	}
 
-        .dark-mode-only {
-          display: block !important;
-        }
-        .light-mode-only {
-          display: none !important;
-        }
+	.dark-mode-only {
+		display: block !important;
+	}
+	.light-mode-only {
+		display: none !important;
+	}
 
 	.posts article .date {
 		color: white;
